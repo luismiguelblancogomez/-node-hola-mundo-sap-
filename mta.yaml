@@ -1,3 +1,4 @@
+_schema-version: "2.2"
 ID: node-hola-mundo
 version: 1.0.0
 description: Proyecto Hola Mundo en Node.js
@@ -5,12 +6,8 @@ modules:
   - name: node-hola-mundo
     type: nodejs
     path: .
-    build-parameters:
-      builder: npm
     requires:
       - name: destination
-        properties:
-          - name: destination
 resources:
   - name: destination
     parameters:
