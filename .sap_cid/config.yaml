@@ -1,0 +1,9 @@
+---
+stages:
+  build:
+    buildTool: "mta"
+    buildDescriptor: "mta.yaml"
+    buildToolVersion: "MBTJ21N22"
+  malwareScan:
+    scan: false
+
