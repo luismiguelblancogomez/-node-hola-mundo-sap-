@@ -1,0 +1,37 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repositorio
+      uses: actions/checkout@v3
+
+    - name: Configurar Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+
+    - name: Instalar dependencias
+      run: npm install
+
+    - name: Ejecutar app
+      run: node app.js
+
+    - name: Verificar salida "Hola Mundo"
+      run: |
+        OUTPUT=$(node app.js)
+        echo "$OUTPUT"
+        if [[ "$OUTPUT" != "Hola Mundo" ]]; then
+          echo "Salida inesperada."
+          exit 1
+        fi
