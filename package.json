@@ -1,0 +1,9 @@
+{
+  "name": "-node-hola-mundo-sap-",
+  "version": "1.0.0",
+  "description": "Proyecto Hola Mundo en Node.js para SAP CI/CD",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  }
+}
